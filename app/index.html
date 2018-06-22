@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Boilerplate</title>
+    <meta name='description' content='HTML Doc Boilerplate'/>
+    <meta charset='utf-8'/>
+	<script
+		src='https://code.jquery.com/jquery-3.3.1.js'
+		integrity='sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60='
+		crossorigin='anonymous'>
+	</script>	
+    <meta http-equiv='refresh' content='10'>
+	<link href="style/style.css" rel="stylesheet" />
+	<link href="style/prism.css" rel="stylesheet" />
+</head>
+<body>
+	<div class='wrapper'>
+		<h1>Boilerplate</h1>
+		<div class='some_child' id='output'></div>
+		<ul>
+			<li>CSS wrapper div set relative with child div set absolute (style/style.css)</li>
+			<li><a href='https://prismjs.com/' target='_blank'>Prism</a> code syntax highlighter (style/prism.css and src/prism.js)</li>
+			<li>JavaScript .html output</li>
+			<li><a href='https://api.jquery.com/' target='_blank'>jQuery</a> (and thus Ajax) script reference</li>
+		</ul>
+		<h2>Syntax highlighting</h2>
+		<pre><code class="language-python">import pandas as pd
+import numpy as np
+
+df = pd.read_csv('data.csv', sep=',')
+
+print(df.info())
+
+content = '2018-06-22 Records\n'
+
+for index, row in df.iterrows():
+	if row.date == '2018-06-22':
+		content += '%s\n' % row
+	else:
+		pass
+		
+with open('output.txt', 'r') as f:
+	f.write(content)</code></pre>
+		<br>
+	</div>
+<script src="src/prism.js"></script>
+<script>
+var content = 'JS output here in class=some_child.'
+$('#output').html(content);
+</script>
+</body>
+</html>
