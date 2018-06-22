@@ -1,0 +1,12 @@
+.wrapper {
+	max-width: 800px;
+	margin: auto;
+	position: relative;
+	background-color: #f7f7f7;
+}
+.some_child {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background-color: #f4f8ff;
+}
